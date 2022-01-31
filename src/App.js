@@ -1,27 +1,20 @@
-import React, { useState } from "react";
-import './App.css';
+import React from "react";
+import "./App.css";
+// import UseEffect1 from "./components/useEffect/useEffect1";
+// import UseEffect2 from "./components/useEffect/useEffect2";
+//  import Basicform from "./components/forms/basicform";
+//import UseEffect3 from "./components/useEffect/useEffect3";
+//import NameForm from "./components/forms/NameForm";
+import UseEffectAPI from "./components/useEffect/useEffectAPI";
 
 function App() {
-  const [color, setColor] = useState("red");
   return (
-    <div className="App">
-     <h1>My favorite color is {color}!</h1>
-      <button
-        type="button"
-        onClick={() => setColor("blue")}
-      >Blue</button>
-      <button
-        type="button"
-        onClick={() => setColor("red")}
-      >Red</button>
-      <button
-        type="button"
-        onClick={() => setColor("pink")}
-      >Pink</button>
-      <button
-        type="button"
-        onClick={() => setColor("green")}
-      >Green</button>
+    <div>
+      {/* {<Basicform /> } */}
+      {/* {<UseEffect1 />} */}
+      {/*< UseEffect2 />*/}
+      {/* { <NameForm />} */}
+      {<UseEffectAPI />}
     </div>
   );
 }
