@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
+import { FcApproval } from "react-icons/fc";
+import { FaGithub } from "react-icons/fa";
 
-const Gitusers = ({users}) => {
+
+const Gitusers = ({ users }) => {
   return (
     <>
-     <h2>List of Github Users</h2>
+      <h2>List of Github Users</h2>
       <div className="container-fluid mt-5">
         <div className="row text-center">
           {users.map((curElem) => {
-
-            const{avatar_url,id,login,type} = curElem;
+            const { avatar_url, id, login, type } = curElem;
 
             return (
               <div className="col-10 col-md-4 mt-5" key={id}>
@@ -23,8 +25,14 @@ const Gitusers = ({users}) => {
                       />
                     </div>
                     <div className="ml-3 w-100">
-                      <h4 className="mb-0 mt-0 textLeft">{login}</h4>
-                      <span className="text-left">{type}</span>
+                      <h4 className="mb-0 mt-0 textLeft">
+                        {login}
+                        <FcApproval />
+                      </h4>
+                      <span className="text-left">
+                        {type}
+                        <FaGithub />
+                      </span>
                       <div className="p-2 mt-2 bg-primary d-flex justify-content-between rounded text-white stats">
                         <div className="d-flex flex-column">
                           <span className="articles">Articles</span>
@@ -47,10 +55,8 @@ const Gitusers = ({users}) => {
           })}
         </div>
       </div>
-
-
     </>
-  )
-}
+  );
+};
 
-export default Gitusers
+export default Gitusers;
